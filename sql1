@@ -1,11 +1,11 @@
-[Revising the Select Query-1](https://www.hackerrank.com/challenges/weather-observation-station-7/problem?isFullScreen=true)
+###**[Revising the Select Query-1](https://www.hackerrank.com/challenges/revising-the-select-query)**
 
-Query all columns for all American cities in the CITY table with populations larger than 100000. The CountryCode for America is USA.
+
+Query all columns for all American cities in CITY with populations larger than 100,000. The CountryCode for America is USA.
+
+Input Format
 
 The CITY table is described as follows:
-
-![station]
-(https://s3.amazonaws.com/hr-challenge-images/9336/1449345840-5f0a551030-Station.jpg)
 
 |  Field | Type |
 |-------|-----|
@@ -14,3 +14,8 @@ The CITY table is described as follows:
 | COUNTRY CODE  | VARCHAR2(3)  |
 | DISTRICT |  VARCHAR2(20) |
 | POPULATION | NUMBER |
+
+**Solution**
+```sql
+SELECT * FROM CITY WHERE COUNTRYCODE = 'USA' AND POPULATION > 100000;
+```
